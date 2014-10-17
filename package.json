@@ -1,0 +1,31 @@
+{
+  "name": "pw2014-isomorphic",
+  "version": "0.0.1",
+  "description": "Atelier Paris Web 2014",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./node_modules/grunt-cli/bin/grunt start"
+  },
+  "author": "Yannick Croissant",
+  "license": "MIT",
+  "dependencies": {
+    "superagent": "~0.20.0",
+    "express": "~4.9.7",
+    "react": "~0.11.2",
+    "node-jsx": "~0.11.0",
+    "body-parser": "~1.9.0",
+    "react-async": "~1.0.2",
+    "fibers": "~1.0.2",
+    "bootstrap": "~3.2.0"
+  },
+  "devDependencies": {
+    "reactify": "~0.14.0",
+    "grunt": "~0.4.5",
+    "grunt-cli": "~0.1.13",
+    "load-grunt-tasks": "~0.6.0",
+    "grunt-concurrent": "~1.0.0",
+    "grunt-nodemon": "~0.3.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-browserify": "~3.0.1"
+  }
+}
