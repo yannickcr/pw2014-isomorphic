@@ -1,4 +1,8 @@
 
+0.0.2 / 2014-10-17
+==================
+ * Add static form
+
 0.0.1 / 2014-10-17
 ==================
- * first revision
+ * First revision
