@@ -1,4 +1,8 @@
 
+0.0.8 / 2014-10-17
+==================
+ * Split application into components
+
 0.0.7 / 2014-10-17
 ==================
  * Going isomorphic

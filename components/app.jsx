@@ -5,6 +5,10 @@ var React      = require('react');
 var ReactAsync = require('react-async');
 var request    = require('superagent');
 
+// Components
+var Form     = require('./form.jsx');
+var PostsList = require('./postsList.jsx');
+
 var App = React.createClass({
   mixins: [ReactAsync.Mixin],
 
@@ -28,56 +32,23 @@ var App = React.createClass({
       }.bind(this));
   },
 
-  addPost: function(e) {
-    e.preventDefault();
-
-    var content = this.refs.content.getDOMNode().value;
-
-    if (!content) {
-      return;
-    }
-
-    request
-      .post('http://localhost:8000/api/addPost')
-      .send({
-        content: content
-      })
-      .end(this.updateState);
-
-    this.refs.content.getDOMNode().value = '';
-
-  },
-
   render: function() {
-
-    var posts = [];
-
-    for(var i in this.state.posts) {
-      var post = this.state.posts[i];
-      posts.push(<li className="list-group-item" key={post.id}>{post.content}</li>);
-    }
-
     return (
-    <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <title>Isomorphic example</title>
-        <link rel="stylesheet" href="css/bootstrap.min.css" />
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
-      </head>
-      <body>
-      <section className="container">
-        <h1>Isomorphic example</h1>
-        <form method="post" action="/api/addPost" onSubmit={this.addPost}>
-          <div className="form-group"><textarea className="form-control" name="content" ref="content"></textarea></div>
-          <div className="form-group"><button className="btn btn-primary" type="submit">Submit</button></div>
-        </form>
-        <ul className="list-group">
-          {posts}
-        </ul>
-      </section>
-      </body>
-    </html>
+      <html lang="en">
+        <head>
+          <meta charSet="utf-8" />
+          <title>Isomorphic example</title>
+          <link rel="stylesheet" href="css/bootstrap.css" />
+          <link rel="stylesheet" href="css/bootstrap-theme.css" />
+        </head>
+        <body>
+          <section className="container">
+            <h1>Isomorphic example</h1>
+            <Form onSubmit={this.updateState} />
+            <PostsList posts={this.state.posts} />
+          </section>
+        </body>
+      </html>
     );
   }
 });
