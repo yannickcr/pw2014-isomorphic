@@ -1,4 +1,8 @@
 
+0.0.5 / 2014-10-17
+==================
+ * Add the posts list
+
 0.0.4 / 2014-10-17
 ==================
  * Add submit handler on the form
