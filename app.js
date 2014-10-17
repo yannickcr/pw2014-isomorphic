@@ -13,6 +13,7 @@ server.use(bodyParser.json());
 server.use(express.static('public'));
 server.use(express.static('node_modules/bootstrap/dist'));
 server.use('/api', require('./lib/api'));
+server.use(require('./lib/renderer'));
 server.use(function(req, res) {
     res.status(404);
     res.end();

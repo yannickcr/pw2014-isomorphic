@@ -58,6 +58,14 @@ var App = React.createClass({
     }
 
     return (
+    <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <title>Isomorphic example</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+      </head>
+      <body>
       <section className="container">
         <h1>Isomorphic example</h1>
         <form method="post" action="/api/addPost" onSubmit={this.addPost}>
@@ -68,6 +76,8 @@ var App = React.createClass({
           {posts}
         </ul>
       </section>
+      </body>
+    </html>
     );
   }
 });
@@ -75,5 +85,5 @@ var App = React.createClass({
 module.exports = App;
 
 if (typeof document !== 'undefined') {
-  React.renderComponent(App(), document.body);
+  React.renderComponent(App(), document);
 }

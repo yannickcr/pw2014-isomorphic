@@ -1,4 +1,8 @@
 
+0.0.7 / 2014-10-17
+==================
+ * Going isomorphic
+
 0.0.6 / 2014-10-17
 ==================
  * Update the posts list after a submit
