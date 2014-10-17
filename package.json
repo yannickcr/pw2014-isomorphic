@@ -1,6 +1,6 @@
 {
   "name": "pw2014-isomorphic",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Atelier Paris Web 2014",
   "main": "app.js",
   "scripts": {

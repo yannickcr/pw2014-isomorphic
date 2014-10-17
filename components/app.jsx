@@ -18,6 +18,16 @@ var App = React.createClass({
       });
   },
 
+  updateState: function() {
+    request
+      .get('http://localhost:8000/api/getPosts')
+      .end(function(err, res) {
+        this.setState({
+          posts: res.body
+        });
+      }.bind(this));
+  },
+
   addPost: function(e) {
     e.preventDefault();
 
@@ -32,7 +42,7 @@ var App = React.createClass({
       .send({
         content: content
       })
-      .end();
+      .end(this.updateState);
 
     this.refs.content.getDOMNode().value = '';
 

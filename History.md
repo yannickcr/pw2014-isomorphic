@@ -1,4 +1,8 @@
 
+0.0.6 / 2014-10-17
+==================
+ * Update the posts list after a submit
+
 0.0.5 / 2014-10-17
 ==================
  * Add the posts list
